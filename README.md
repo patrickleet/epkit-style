@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 bootstrap-override-boilerplate
 ==============================
 
@@ -74,7 +73,3 @@ These are the techniques I use to do so. The process to get to this point is the
 2. In ```less```, delete everything except ```bootstrap.less```, ```responsive.less```, and ```variables.less```.
 3. Modify ```bootstrap.less```, and ```responsive.less``` to import from the bootstrap submodule for everything except ```variables.less```
 4. Add some node_modules as dev dependencies, and reference them from script, like watchr, so they don't need to be installed globally.
-=======
-epkit-style
-===========
->>>>>>> b5fe8eb5cfe9dd90e230702c57e96101470e586a
