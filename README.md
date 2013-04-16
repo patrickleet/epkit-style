@@ -1,66 +1,7 @@
-bootstrap-override-boilerplate
-==============================
+Epkit-Style
+-----------
 
-A boilerplate for easy and unobtrusive overriding of bootstrap with a custom theme.
-Allows for unobtrusive overriding of all bootstrap less files, docs, and a build process.
-
-Includes font-awesome by default. You can easily remove this in your overrides.
-
-How to Use
-==========
-
-1. Bootstrap Submodule
-2. Making Customizations
-3. Building
-
-Bootstrap Submodule
--------------------
-
-I've found it's optimal to include bootstrap as a submodule to easily keep it up to date with the latest version of Twitter Bootstrap.
-
-Follow these instructions for cloning a project with submodules:
-[Cloning a Project with Submodules](http://git-scm.com/book/en/Git-Tools-Submodules#Cloning-a-Project-with-Submodules)
-
-tl;dr;:
-
-    git clone <<git-url>>
-    cd <<dir>>
-    git submodule init
-    git submodule update
-
-
-Making Customizations
----------------------
-
-1. Find the code you want to override, for example, if you want to make all tables have a solid red border, you would want to override ```tables.less```
-
-2. Create ```epkit-bootstrap/less/tables-overrides.less```
-
-3. Import your new file directly after the corresponding import
-
-        @import "../../bootstrap/less/tables.less";
-        @import "tables-overrides.less";
-
-4. Write less to override table styles in ```tables-overrides.less```
-
-Building
---------
-
-Once you've made changes it's easy to build and see your changes applied against the bootstrap docs.
-
-1. First start by changing to the ```epkit-bootstrap``` dir
-
-    ```cd epkit-bootstrap```
-
-2. Install all deps with ```npm install```
-3. Build with ```make```
-
-Now you can open ```bootstrap/docs/index.html``` and see your live style guide.
-
-Optionally, you can watch files with ```make watch```
-
-About
-=====
+[http://patrickleet.github.io/epkit-style/](View Docs)
 
 Bootstrap-Overrides (optional reading)
 -----------------------------------------
@@ -69,7 +10,39 @@ The purpose of this boilerplate is to make your own customizations to bootstrap 
 
 These are the techniques I use to do so. The process to get to this point is the following:
 
-1. Copy everything to a mirrored directory structure of ```bootstrap``` named ```epkit-bootstrap```.
-2. In ```less```, delete everything except ```bootstrap.less```, ```responsive.less```, and ```variables.less```.
-3. Modify ```bootstrap.less```, and ```responsive.less``` to import from the bootstrap submodule for everything except ```variables.less```
-4. Add some node_modules as dev dependencies, and reference them from script, like watchr, so they don't need to be installed globally.
+1. Copy ```bootstrap.less```, ```responsive.less```, and ```variables.less``` into a mirrored directory structure called ```bootstrap-overrides```.
+
+        - bootstrap-overrides
+          - less
+
+2. Copy ```package.json``` to ```bootstrap-overrides/```
+
+3. Copy ```Makefile```
+
+Next I modified a few things in ```bootstrap-overrides``` to get our build process to work using our overrides.
+
+1. Modify ```bootstrap.less```, and ```responsive.less``` to import from the bootstrap submodule for everything except ```variables.less```
+
+2. Add a variable called ```BOOTSTRAP_DIR``` to the ```Makefile```
+
+       ```BOOTSTRAP_DIR = ../bootstrap```
+
+3. Prefix all referenced dirs in the build and test section with ```${BOOTSTRAP_DIR}/```
+
+        build:
+          @echo "\n${HR}"
+          @echo "Building Bootstrap..."
+          @echo "${HR}\n"
+          @./node_modules/.bin/jshint ${BOOTSTRAP_DIR}/js/*.js --config ${BOOTSTRAP_DIR}/js/.jshintrc
+          @./node_modules/.bin/jshint ${BOOTSTRAP_DIR}/js/tests/unit/*.js --config ${BOOTSTRAP_DIR}/js/.jshintrc
+          etc..
+
+4. Update constant locations of ```BOOTSTRAP``` and ```BOOTSTRAP_RESPONSIVE``` to the ```BOOTSTRAP_DIR```
+
+        BOOTSTRAP_DIR = ../bootstrap
+        BOOTSTRAP = ${BOOTSTRAP_DIR}/docs/assets/css/bootstrap.css
+        BOOTSTRAP_LESS = ./less/bootstrap.less
+        BOOTSTRAP_RESPONSIVE = ${BOOTSTRAP_DIR}/docs/assets/css/bootstrap-responsive.css
+        BOOTSTRAP_RESPONSIVE_LESS = ./less/responsive.less
+
+5. Add some node_modules as dev dependencies, and reference them from script, like watchr
