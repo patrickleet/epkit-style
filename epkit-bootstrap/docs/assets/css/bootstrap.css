@@ -223,7 +223,7 @@ textarea {
 
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #333333;
@@ -1065,7 +1065,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 label {
@@ -5245,7 +5245,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-search .search-query {
   padding: 4px 14px;
   margin-bottom: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
@@ -6866,6 +6866,303 @@ a.badge:focus {
 
 .hero-unit li {
   line-height: 30px;
+}
+
+/* Separators (hr) */
+
+.bs-docs-separator {
+  margin: 40px 0 39px;
+}
+
+/* Faded out hr */
+
+hr.soften {
+  height: 1px;
+  margin: 70px 0;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  border: 0;
+}
+
+/* Jumbotrons
+-------------------------------------------------- */
+
+/* Base class
+------------------------- */
+
+.jumbotron {
+  position: relative;
+  padding: 40px 0;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+  background: #020031;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(45deg, #020031 0%, #6d3353 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #020031), color-stop(100%, #6d3353));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(45deg, #020031 0%, #6d3353 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(45deg, #020031 0%, #6d3353 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(45deg, #020031 0%, #6d3353 100%);
+  /* IE10+ */
+
+  background: linear-gradient(45deg, #020031 0%, #6d3353 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#020031', endColorstr='#6d3353', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+
+  -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2), inset 0 -3px 7px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2), inset 0 -3px 7px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2), inset 0 -3px 7px rgba(0, 0, 0, 0.2);
+}
+
+.jumbotron h1 {
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.jumbotron p {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+/* Link styles (used on .masthead-links as well) */
+
+.jumbotron a {
+  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+
+.jumbotron a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+}
+
+/* Download button */
+
+.masthead .btn {
+  padding: 19px 24px;
+  font-size: 24px;
+  font-weight: 200;
+  color: #fff;
+  /* redeclare to override the `.jumbotron a` */
+
+  border: 0;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 5px rgba(0, 0, 0, 0.25);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 5px rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 5px rgba(0, 0, 0, 0.25);
+  -webkit-transition: none;
+     -moz-transition: none;
+          transition: none;
+}
+
+.masthead .btn:hover {
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 5px rgba(0, 0, 0, 0.25);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 5px rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.masthead .btn:active {
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+     -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+          box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Pattern overlay
+------------------------- */
+
+.jumbotron .container {
+  position: relative;
+  z-index: 2;
+}
+
+.jumbotron:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background: url(../img/bs-docs-masthead-pattern.png) repeat center center;
+  content: '';
+  opacity: .4;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1) {
+  .jumbotron:after {
+    background-size: 150px 150px;
+  }
+}
+
+/* Masthead (docs home)
+------------------------- */
+
+.masthead {
+  padding: 70px 0 80px;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.masthead h1 {
+  font-size: 120px;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.masthead p {
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 1.25;
+}
+
+/* Textual links in masthead */
+
+.masthead-links {
+  margin: 0;
+  list-style: none;
+}
+
+.masthead-links li {
+  display: inline;
+  padding: 0 10px;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* Social proof buttons from GitHub & Twitter */
+
+.bs-docs-social {
+  padding: 15px 0;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Quick links on Home */
+
+.bs-docs-social-buttons {
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+.bs-docs-social-buttons li {
+  display: inline-block;
+  *display: inline;
+  padding: 5px 8px;
+  line-height: 1;
+  *zoom: 1;
+}
+
+/* Subhead (other pages)
+------------------------- */
+
+.subhead {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.subhead h1 {
+  font-size: 60px;
+}
+
+.subhead p {
+  margin-bottom: 20px;
+}
+
+.subhead .navbar {
+  display: none;
+}
+
+/* Marketing section of Overview
+-------------------------------------------------- */
+
+.marketing {
+  color: #5a5a5a;
+  text-align: center;
+}
+
+.marketing h1 {
+  margin: 60px 0 10px;
+  font-size: 60px;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.marketing h2 {
+  margin-bottom: 5px;
+  font-weight: 200;
+}
+
+.marketing p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.marketing .marketing-byline {
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.25;
+  color: #999;
+}
+
+.marketing-img {
+  display: block;
+  max-height: 145px;
+  margin: 0 auto 30px;
+}
+
+/* Footer
+-------------------------------------------------- */
+
+.footer {
+  padding: 30px 0;
+  margin-top: 70px;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer p {
+  margin-bottom: 0;
+  color: #777;
+}
+
+.footer-links {
+  margin: 10px 0;
+}
+
+.footer-links li {
+  display: inline;
+  padding: 0 2px;
+}
+
+.footer-links li:first-child {
+  padding-left: 0;
 }
 
 .pull-right {
