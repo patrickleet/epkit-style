@@ -226,7 +226,7 @@ body {
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: #333333;
+  color: #919396;
   background-color: #ffffff;
 }
 
@@ -740,7 +740,7 @@ h5,
 h6 {
   margin: 10px 0;
   font-family: inherit;
-  font-weight: bold;
+  font-weight: 300;
   line-height: 20px;
   color: inherit;
   text-rendering: optimizelegibility;
@@ -967,6 +967,16 @@ address {
   margin-bottom: 20px;
   font-style: normal;
   line-height: 20px;
+}
+
+.page-header {
+  width: 4000px;
+  padding: 9px;
+  padding-left: 11px;
+  margin: 20px 0 30px;
+  color: white;
+  background-color: #00a8df;
+  border-bottom: 1px solid #eeeeee;
 }
 
 code,
@@ -1648,7 +1658,7 @@ select:focus:invalid:focus {
 
 .help-block,
 .help-inline {
-  color: #595959;
+  color: #b8b9bb;
 }
 
 .help-block {
@@ -6929,7 +6939,7 @@ hr.soften {
 
 .jumbotron h1 {
   font-size: 80px;
-  font-weight: bold;
+  font-weight: 300;
   line-height: 1;
   letter-spacing: -1px;
 }
