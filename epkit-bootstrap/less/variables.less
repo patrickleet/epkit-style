@@ -26,8 +26,8 @@
 
 // Accent colors
 // -------------------------
-@blue:                  #049cdb;
-@blueDark:              #0064cd;
+@blue:                  @epkitBlue;//#049cdb;
+@blueDark:              @epkitBlue;//#0064cd;
 @green:                 #46a546;
 @red:                   #9d261d;
 @yellow:                #ffc40d;
@@ -39,7 +39,7 @@
 // Scaffolding
 // -------------------------
 @bodyBackground:        @white;
-@textColor:             @grayDark;
+@textColor:             @textMidGray; //@grayDark;
 
 
 // Links
@@ -60,8 +60,10 @@
 @altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
-@headingsFontWeight:    bold;    // instead of browser default, bold
+@headingsFontWeight:    300;    // instead of browser default, bold
 @headingsColor:         inherit; // empty to use BS default, @textColor
+
+@pageHeaderPadding: (@baseLineHeight / 2) - 1;
 
 
 // Component sizing
