@@ -2,10 +2,26 @@
   padding: @pageHeaderPadding;
   margin: @baseLineHeight 0 (@baseLineHeight * 1.5);
   border-bottom: 1px solid @grayLighter;
-  background-color: @epkitBlue;
-  color: white;
-  width: 4000px;
+  background-color: @objectLightGray;
+  color: @black;
   padding-left: @pageHeaderPadding + 2px;
+
+  &.bright {
+    background-color: @epkitBlue;
+    color: @white;
+    small {
+      color: @white;
+    }
+  }
+
+  &.mini
+  {
+    padding: 1px;
+  }
+
+  small {
+    color: @black;
+  }
 }
 
 //TODO: Refactor page-header color
